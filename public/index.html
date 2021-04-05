@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./css/main.css">
+<header>
+  <h1 class="gradient-text">Player</br>Stats</h1>
+</header>
+
+<body>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <select id="playerSelect" name="players" onchange="playerSelect(this)">
+        </select>
+        <template id="profileTemplate">
+          <img id="playerImg">
+          <span class="label" id="name"></span>
+          <span class="label" id="position"></span>
+          <span class="label-stats" id="appearances"></span>
+          <span class="label-stats" id="goals"></span>
+          <span class="label-stats" id="assists"></span>
+          <span class="label-stats" id="gpm"></span>
+          <span class="label-stats" id="ppm"></span>
+        </template>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCya4Ekw-zBCcwTSwrOSMn1_3wDkswMBE",
+    authDomain: "player-stats-cards.firebaseapp.com",
+    projectId: "player-stats-cards",
+    storageBucket: "player-stats-cards.appspot.com",
+    messagingSenderId: "714348579914",
+    appId: "1:714348579914:web:336562c79528589551aab3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./scripts/index.js"></script>
+</html>
